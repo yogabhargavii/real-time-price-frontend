@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const fetchCoins = async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/coins'); // Adjust the URL as needed
+    const response = await axios.get('http://localhost:3001/api/coins'); // Adjust the URL as needed
     return response.data;
   } catch (error) {
     console.error('Error fetching coins:', error);

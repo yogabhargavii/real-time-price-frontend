@@ -32,7 +32,7 @@ const CoinTable: React.FC = () => {
         {coins.map((coin) => (
           <tr key={coin.symbol}>
             <td>{coin.symbol}</td>
-            <td>{coin.price}</td>
+            <td>{coin?.rate}</td>
             <td>{coin.volume}</td>
           </tr>
         ))}

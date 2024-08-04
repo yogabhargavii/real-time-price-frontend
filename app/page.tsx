@@ -9,7 +9,7 @@ import { setCoins } from './src/redux/coinSlice';
 
 interface Coin {
   symbol: string;
-  price: number;
+  rate: number;
   volume: number;
 }
 
@@ -18,7 +18,7 @@ const Home = () => {
   const coins = useSelector((state: RootState) => state.coins.coins);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/coins')
+    axios.get('http://localhost:3001/api/coins')
       .then(response => {
         dispatch(setCoins(response.data));
       })
@@ -40,7 +40,7 @@ const Home = () => {
           {coins.map((coin: Coin) => (
             <tr key={coin.symbol}>
               <td>{coin.symbol}</td>
-              <td>{coin.price}</td>
+              <td>{coin.rate}</td>
               <td>{coin.volume}</td>
             </tr>
           ))}

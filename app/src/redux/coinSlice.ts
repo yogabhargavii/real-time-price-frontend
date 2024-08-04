@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface Coin {
   symbol: string;
-  price: number;
+  rate: number;
   volume: number;
 }
 
